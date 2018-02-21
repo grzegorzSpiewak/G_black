@@ -1,0 +1,33 @@
+.logo {
+  display: none;
+  @media (min-width: $screen-small) {
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  @media (min-width: $screen-large) {
+    top: 20.5%;
+    left: 27%;
+  }
+  &__wrap {
+    @include inner-box-shadow;
+    background: $body-background;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 2.5em;
+    height: 2.5em;
+    color: $counter;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+  }
+}

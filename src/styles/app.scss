@@ -1,0 +1,40 @@
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+@import "scss/mixins/mixins";
+//----------------------------------*\
+// BASE MODULES
+//----------------------------------*/
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+@import "scss/modules/normalize";
+@import "scss/modules/variables";
+@import "scss/modules/tags";
+//----------------------------------*\
+// Components
+//----------------------------------*/
+@import "scss/components/hamburgerIcon";
+@import "scss/components/pageWrap";
+@import "scss/components/box";
+@import "scss/components/navigation";
+@import "scss/components/menu";
+@import "scss/components/intro";
+@import "scss/components/informations";
+@import "scss/components/flexWrap";
+@import "scss/components/diamondGrid";
+@import "scss/components/logo";
+@import "scss/components/image";
+@import "scss/components/loading";
+@import "scss/components/homepage";
+@import "scss/components/carusel";
+@import "scss/components/slide";
+@import "scss/components/header";
+@import "scss/components/TransitionPlaceholder";
+//----------------------------------*\
+// Css animations
+//----------------------------------*/
+@import "scss/animations/keyframes";
+@import "scss/animations/pageTransition";
+@import "scss/animations/fontAwesomeAnimation";

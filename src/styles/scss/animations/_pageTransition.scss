@@ -1,0 +1,23 @@
+.transition-enter {
+  -webkit-transform: translateX(-100%) scale(.1);
+  transform: translateX(-100%) scale(.1);
+  opacity: 0;
+}
+
+.transition-enter.transition-enter-active {
+  -webkit-transform: scale(.7);
+  transform: scale(.7);
+  opacity: 1;
+}
+
+.transition-exit {
+  -webkit-transform: scale(.7);
+  transform: scale(.7);
+  opacity: 1;
+}
+
+.transition-exit.transition-exit-active {
+  -webkit-transform: translateX(100%) scale(.1);
+  transform: translateX(100%) scale(.1);
+  opacity: 0;
+}

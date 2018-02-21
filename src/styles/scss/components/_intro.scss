@@ -1,0 +1,85 @@
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: move 1s linear forwards;
+  &__wrap {
+    width: 65%;
+    height: 8em;
+    border: 2px solid transparent;
+    padding: 2em;
+    transition: all 1s ease;
+    @media (min-width: $tablet-large) {
+      height: 12em;
+      width: 60%;
+    }
+    @media (min-width: $screen-large) {
+      height: 10em;
+    }
+    &:before, &:after {
+      width: inherit;
+      height: inherit;
+      @include hover-pseudo;
+      top: 41.37%;
+      left: 20%;
+    }
+    &:before {
+      @include hover-before;
+      animation: show_border 0.5s linear 3.5s forwards;
+    }
+  }
+  &__name {
+    @include intro-text;
+  }
+  &__surname {
+    @include intro-text;
+    opacity: 0;
+    animation: show_text 1s linear 1.7s forwards;
+  }
+  &__position {
+    @include intro-text;
+    opacity: 0;
+    animation: show_text 1s linear 2.5s forwards;
+    color: $counter;
+  }
+  &__line {
+    background: $accent;
+    height: 2px;
+    width: 200%;
+    position: absolute;
+    top: 46.80%;
+    left: 48%;
+    animation: line-length 1s linear 0.5s forwards;
+  }
+  &__btn {
+    @include btn-small;
+    position: absolute;
+    top: 64%;
+    opacity: 0;
+    z-index: -9999;
+    animation: show_text 4s linear 0.5s forwards;
+    &:before, &:after {
+      @include btn-hover;
+      width: 101%;
+      height: 100%;
+      top: 2%;
+      left: 0;
+    }
+    &:before {
+      @include btn-hover-before;
+    }
+    &:after {
+      @include btn-hover-after;
+    }
+    &:hover {
+      &::after, &::before {
+        -webkit-transform: scale(1);
+        cursor: pointer;
+      }
+    }
+  }
+}

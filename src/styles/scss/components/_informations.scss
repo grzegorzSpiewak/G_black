@@ -1,0 +1,79 @@
+.information {
+  &--left {
+    text-align: center;
+    @media (min-width: $screen-small) {
+      text-align: left;
+      direction: ltr;
+    }
+  }
+  &--right {
+    text-align: center;
+    @media (min-width: $screen-small) {
+      text-align: right;
+      direction: rtl;
+    }
+  }
+  &--center {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    @media (min-width: $screen-small) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  &__reverse {
+    &--left {
+      display: none;
+      @media (min-width: $screen-small) {
+        display: block;
+        text-align: left;
+        direction: ltr;
+      }
+    }
+    &--right {
+      display: none;
+      @media (min-width: $screen-small) {
+        display: block;
+        text-align: right;
+        direction: rtl;
+      }
+    }
+  }
+  &__header {
+    font-size: 2em;
+    padding: 1.25em 0 0 0;
+    @media (min-width: $screen-large) {
+      font-size: 3em;
+      padding: 0;
+    }
+  }
+  &__wrap {
+    width: 100%;
+    &__shape {
+      &--top-right {
+        @include shape-top-right;
+      }
+      &--top-left {
+        @include shape-top-left;
+      }
+      &--bottom-right {
+        @include shape-bottom-right;
+      }
+      &--bottom-left {
+        @include shape-bottom-left;
+      }
+    }
+    &__content {
+      @include content;
+    }
+  }
+  &__btn {
+    @include btn-information;
+    transition: all .7s ease;
+    &:hover {
+      @include btn-information-hover;
+      @include outer-box-shadow;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.flex-wrap {
+  display: inline;
+  width: 100%;
+  animation: show 0.5s;
+  @media (min-width: $tablet-large) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+}

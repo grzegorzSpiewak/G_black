@@ -1,0 +1,18 @@
+.image {
+  padding: 0;
+  &__pic {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+    margin: -5px 0 -5px 0;
+    &__loaded {
+      animation: show 0.5s;
+    }
+  }
+  &--hide {
+    display: none;
+    @media (min-width: $screen-small) {
+      display: block;
+    }
+  }
+}

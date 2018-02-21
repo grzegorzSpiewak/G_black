@@ -1,0 +1,106 @@
+.carusel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  touch-action: none;
+  &__page {
+    width: 100%;
+  }
+  &__wrap {
+    width: 100%;
+    height: 40vh;
+    @media (min-width: $screen-small) {
+      height: 16em;
+    }
+    &--page {
+      width: 100%;
+      height: 70vh;
+      overflow: auto;
+      @media (min-width: $screen-small) {
+        height: 20em;
+        overflow: auto;
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    &__item {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 1s ease-out;
+      animation: scale-out 1s ease-out;
+      &:first-child {
+        animation: none;
+      }
+      &__active {
+        opacity: 1;
+        visibility: visible;
+        animation: scale-in 1s ease-out;
+      }
+    }
+  }
+  &__buttons {
+    &__left {
+      padding: 1em;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    &__right {
+      padding: 1em;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 100%;
+      top: 0;
+      left: 93.5%;
+    }
+  }
+  &__indicators {
+    width: 60%;
+    margin: 0 auto;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    &__circle {
+      margin: 1em;
+      width: .6em;
+      height: .6em;
+      border: 1px solid $accent;
+      border-radius: 50%;
+      background: transparent;
+      transition: 0.8s ease;
+      &:hover {
+        cursor: pointer;
+      }
+      &__current {
+        background: $accent;
+        margin: 1em;
+        width: .6em;
+        height: .6em;
+        border: 1px solid transparent;
+        border-radius: 50%;
+      }
+    }
+  }
+}

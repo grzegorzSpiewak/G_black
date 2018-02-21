@@ -1,0 +1,12 @@
+body {
+  position: relative;
+  font-family: $main-font;
+  background: $body-background;
+  @media (min-width: $tablet-large) {
+    overflow: hidden;
+  }
+}
+
+h1 {
+  @include fancy-heading;
+}

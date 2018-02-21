@@ -1,0 +1,98 @@
+/* Intro animations */
+@keyframes move {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: scale(-1, 1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes line-length {
+  from {
+    width: 200%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes show_text {
+  from {
+    z-index: -9999;
+    opacity: 0;
+  }
+  to {
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show_border {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+/* Carusel */
+@keyframes scale-out {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/* Loading Spinner */
+@keyframes spin {
+  100% {  transform: rotate(359deg); }
+}
+
+/* Neon Hover Effect */
+@keyframes neon-box-hover {
+  from {
+    box-shadow: 0 0 5px $main-white, 0 0 5px $main-white, 0 0 5px $main-white, 0 0 5px $accent, 0 0 0px $accent, 0 0 0px $accent, 0 0 0px $accent, 0 0 0px $accent;
+  }
+  to {
+    box-shadow: 0 0 5px $main-white, 0 0 10px $main-white, 0 0 15px $main-white, 0 0 20px $accent, 0 0 35px $accent, 0 0 40px $accent, 0 0 50px $accent, 0 0 75px $accent;
+  }
+}

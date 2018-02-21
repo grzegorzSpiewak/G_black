@@ -1,0 +1,51 @@
+.diamond {
+  width: 100%;
+  margin-bottom: .3em;
+  text-align: center;
+  &__wrap {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @media (min-width: $screen-small) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @media (min-width: $screen-extra-large) {
+      width: 21em;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 26.2%;
+      left: 38.95%;
+    }
+  }
+  &__item {
+    @include inner-box-shadow;
+    background: $body-background;
+    flex: 1;
+
+    @media (min-width: $screen-small) {
+      width: 6em;
+      height: 6em;
+    }
+    @media (min-width: $screen-extra-large) {
+      flex: none;
+      margin: .1em;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      background: $counter;
+    }
+    &__test {
+      @media (min-width: $screen-extra-large) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

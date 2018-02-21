@@ -1,0 +1,65 @@
+.hamburger {
+  z-index: 2;
+  position: fixed;
+  width: 3.5em;
+  height: 3.5em;
+  cursor: pointer;
+  top: 0.8em;
+  left: 80%;
+  border: 2px solid transparent;
+  -webkit-transition:0.5s;
+  transition: all 0.5s;
+
+  &:before, &:after {
+    width: 3.5em;
+    height: 3.5em;
+    @include hover-pseudo;
+  }
+
+  &:before {
+    @include hover-before;
+  }
+
+  &:after {
+    @include hover-after;
+  }
+
+  &:hover {
+    &::after, &::before {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @media (min-width: $tablet-large) {
+    top: 2em;
+    left: 5.5em;
+  }
+
+  &__bar {
+    @include burger-bar;
+    top: 1.60em;
+    left: 0.7em;
+  }
+
+  &__bar:after {
+    content: '';
+    @include burger-bar;
+    top: 0.5em;
+    left: 0;
+  }
+
+  &__bar:before {
+    content: '';
+    @include burger-bar;
+    top: -0.5em;
+    left: 0;
+  }
+
+  &__active {
+    display: none;
+  }
+}
+
+.overflow {
+  overflow: hidden;
+}

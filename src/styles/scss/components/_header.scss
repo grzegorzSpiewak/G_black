@@ -1,14 +1,29 @@
 .header {
   width: 100%;
-  display: inline-block;
-  &__pic {
+  &__image {
     position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 30vh;
-    @media (min-width: $screen-small) {
+    z-index: 1;
+    &:after {
+      @media (min-width: $screen-large) {
+        width: 2px;
+        height: 7em;
+        z-index: -3;
+        background: $main-white;
+        content: '';
+        position: absolute;
+        top: 95%;
+        left: 30%;
+      }
+    }
+    &__pic {
       width: 100%;
-      height: 25em;
+      height: 50vh;
+      object-fit: cover;
+      filter: grayscale(100%);
+      margin: 0;
+      &__loaded {
+        animation: show 0.5s;
+      }
     }
   }
 }

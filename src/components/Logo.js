@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Greg from 'styles/images/Greg.png';
 
 class Logo extends Component {
 
@@ -6,7 +7,7 @@ class Logo extends Component {
     return (
       <section className="box logo">
         <div className="logo__wrap">
-          <h1 className="logo__icon">g</h1>
+          <img src={Greg} className="logo__icon" />
         </div>
       </section>
     );

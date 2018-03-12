@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Blocks from 'styles/images/desk.jpg';
 import Image from 'components/Image';
 
 const Header = (props) => {

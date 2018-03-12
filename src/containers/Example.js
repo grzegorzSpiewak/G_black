@@ -50,8 +50,8 @@ class Example extends Component {
                 />
                 <Carusel
                   fullWidth={true}
-                  hasButtons={true}
-                  hasIndicators={false}
+                  hasButtons={false}
+                  hasIndicators={true}
                   slidesContent={content.fields.sliderBig}
                   automatedTransition={false}
                 />

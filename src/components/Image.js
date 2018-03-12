@@ -39,9 +39,9 @@ class BoxImage extends Component {
       <section
         className={
           this.props.hideOnMobie ?
-            `${this.props.classType} image--hide`
+            `${this.props.classType}__image--hide`
           :
-            `${this.props.classType} image`
+            `${this.props.classType}__image`
         }
       >
         {
@@ -49,7 +49,12 @@ class BoxImage extends Component {
             <img
               src={this.state.imagePath}
               alt={this.state.imageAlt}
-              className={this.state.imageLoaded ? "image__pic image__pic__loaded" : "image__pic"}
+              className={
+                this.state.imageLoaded ?
+                  `${this.props.classType}__image__pic ${this.props.classType}__image__pic__loaded`
+                :
+                  `${this.props.classType}__image__pic`
+              }
             />
           :
             <Loading />

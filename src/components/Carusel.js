@@ -66,6 +66,7 @@ class Carusel extends Component {
           onTouchStart={this.nextSlide}
           content={item.content}
           fullWidth={item.fullWidth}
+          nextSlide={this.nextSlide}
         />
       )
     }

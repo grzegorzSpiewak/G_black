@@ -18,14 +18,16 @@
       width: 21em;
       position: absolute;
       transform: rotate(45deg);
-      top: 26.2%;
+      top: 26.45%;
       left: 38.95%;
     }
   }
   &__item {
-    @include inner-box-shadow;
-    background: $body-background;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
 
     @media (min-width: $screen-small) {
       width: 6em;
@@ -35,14 +37,13 @@
       flex: none;
       margin: .1em;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include inner-box-shadow;
+      background: $body-background;
     }
-    &:hover {
-      background: $counter;
-    }
-    &__test {
+    &__icon {
+      width: 3em;
+      height: 3em;
+      filter: grayscale(100%);
       @media (min-width: $screen-extra-large) {
         transform: rotate(-45deg);
       }
